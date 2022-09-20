@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Heavitas;
+  src: url(./fuentes/Heavitas.ttf);
+}
+body {
+  text-align: center;
+  background-image: url(https://www.randstad.es/wp-content/uploads/2016/08/el-tiempo-880.jpg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: Heavitas;
+  color: black;
+}
+button {
+  background-color: black;
+  margin-right: 2%;
+}
+i {
+  color: white;
+  font-size: 300%;
+}

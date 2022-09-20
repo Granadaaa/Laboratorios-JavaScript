@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Insanibu;
+  src: url(./fuentes/Insanibu.ttf);
+}
+body {
+  font-family: Insanibu;
+}

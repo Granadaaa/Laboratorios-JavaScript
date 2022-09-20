@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+  <!-- HEADER-->
+    <header style="background-color:#bf0000; color: white;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <img src="./images/Logotipo pizzería minimalista rojo.png" alt="" srcset="./images/Logotipo pizzería minimalista rojo.png" style="max-width:10%; display: inline; margin-top: -3%">
+                <h1 style="display:inline; font-size: 600%;">LOS MAGOS DE LA PIZZA</h1>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- HEADER-->
+    <main>
+      <!-- NAV BAR-->
+      <nav style="background-color: #046493;">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" style="color: black;" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Productos</button>
+          <button class="nav-link" style="color: black;" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Facturacion</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0"> <div class="container-fluid" style="text-align:center;">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="mt-5" style="font-size:400%;">EMPIEZA TU PEDIDO</h1>
+              <p style="margin-bottom: 5%;">En esta parte encontraras nuestro menu que consta de Pizzas, Bebidas y Acompañamientos</p>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-image:url(./images/PIZZAS.png);">
+                      <img src="./images/PIZZAS.png" alt="" srcset="./images/PIZZAS.png" style="max-width: 10%; margin-right: 35%;">
+                      <h1 style="display: inline; font-size: 500%;">PIZZAS</h1>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="card-deck">
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/Hawaiana.jpg" alt="Card image cap" style="max-width:20%;margin: auto; ">
+                          <div class="card-body">
+                            <h5 class="card-title">HAWAIANA</h5>
+                            <p class="card-text">$ 35.000</p>
+                            <input type="number" name="hawaiana" id="hawaiana" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="hawaiana()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/jamonyqueso.jpg" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">JAMON Y QUESO</h5>
+                            <p class="card-text">$ 25.000</p>
+                            <input type="number" name="jamon" id="jamon" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="jamon()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/peperoni.webp" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">PEPPERONI</h5>
+                            <p class="card-text">$ 40.000</p>
+                            <input type="number" name="peperoni" id="peperoni" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="peperoni()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/maiz.png" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">MAIZ Y TOCINETA</h5>
+                            <p class="card-text">$ 45.000</p>
+                            <input type="number" name="maiz" id="maiz" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="maiz()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/estofada.jpg" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">SUPER ESTOFADA</h5>
+                            <p class="card-text">$ 50.000</p>
+                            <input type="number" name="estofada" id="estofada" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="estofada()">Agregar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-image:url(./images/BEBIDAS.png);">
+                      <img src="./images/BEBIDAS.png" alt="" srcset="./images/BEBIDAS.png" style="max-width: 10%; margin-right: 35%;">
+                      <h1 style="display: inline; font-size: 500%;">BEBIDAS</h1>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="card-deck">
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/coca.webp" alt="Card image cap" style="max-width:20%;margin: auto; ">
+                          <div class="card-body">
+                            <h5 class="card-title">COCA-COLA</h5>
+                            <p class="card-text">$ 5.000</p>
+                            <input type="number" name="coca" id="coca" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="coca()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/manzana.png" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">MANZANA</h5>
+                            <p class="card-text">$ 4.500</p>
+                            <input type="number" name="manzana" id="manzana" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="manzana()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/jugo.png" alt="Card image cap" style="max-width:10%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">JUGO HIT</h5>
+                            <p class="card-text">$ 4.000</p>
+                            <input type="number" name="hit" id="hit" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="hit()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/h2o.jpg" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">AGUA H2O</h5>
+                            <p class="card-text">$ 3.500</p>
+                            <input type="number" name="agua" id="agua" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="agua()">Agregar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-image:url(./images/ACOMPAÑAMIENTOS.png);">
+                      <img src="./images/ACOMPAÑAMIENTOS.png" alt="" srcset="./images/ACOMPAÑAMIENTOS.png" style="max-width: 10%; margin-right: 15%;">
+                      <h1 style="display: inline; font-size: 500%;">ACOMPAÑAMIENTOS</h1>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="card-deck">
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/alitas.jpg" alt="Card image cap" style="max-width:20%;margin: auto; ">
+                          <div class="card-body">
+                            <h5 class="card-title">ALITAS BBQ X5</h5>
+                            <p class="card-text">$ 10.000</p>
+                            <input type="number" name="alitas" id="alitas" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="alitas()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/canela.jpeg" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">ROLLOS DE CANELA X5</h5>
+                            <p class="card-text">$ 5.000</p>
+                            <input type="number" name="canela" id="canela" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="canela()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/palitos.webp" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">PALITOS DE QUESO X5</h5>
+                            <p class="card-text">$ 7.000</p>
+                            <input type="number" name="palitos" id="palitos" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="palitos()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/panesAjo.jpg" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">PANES DE AJO X10</h5>
+                            <p class="card-text">$ 5.000</p>
+                            <input type="number" name="panes" id="panes" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="panes()">Agregar</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img class="card-img-top mt-3" src="./images/galletas.jpg" alt="Card image cap" style="max-width:20%;margin: auto;">
+                          <div class="card-body">
+                            <h5 class="card-title">GALLETAS DE CHOCOLATE x5</h5>
+                            <p class="card-text">$ 5.000</p>
+                            <input type="number" name="galletas" id="galletas" placeholder="Cantidad">
+                            <br>
+                            <button type="button" class="btn btn-primary mt-3" onclick="galletas()">Agregar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+          <div class="container-fluid" style="justify-content: center; text-align: center;">
+
+            <div class="row">
+
+              <div class="col-12">
+
+                <button type="button" class="btn btn-primary mt-3" onclick="total()">Facturacion</button>
+                <div id="factura"></div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+      <!-- NAV BAR-->
+      <!-- INICIO TOTAL-->
+     
+
+      
+
+      
+
+    </main>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</body>
+</html>

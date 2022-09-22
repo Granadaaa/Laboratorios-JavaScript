@@ -161,6 +161,8 @@ function total() {
 
   let factura = document.getElementById("factura");
 
+  let direccion = document.getElementById("direccion").value;
+
   factura.innerHTML =
     `
       <table class="table table-hover">
@@ -327,9 +329,24 @@ function total() {
   
         </tbody>
       </table>
-      <br>
-      <div style="justify-content: center; align-items: center; font-size: 60px">Total a Pagar Mas Envio: <br> $` +
-    totalPagar +
-    ` </div>
     `;
+
+  let totalResult = document.getElementById("total");
+
+  if (totalPagar == 1500) {
+    totalResult.innerHTML = `      <br>
+<div style="justify-content: center; align-items: center; font-size: 60px">Total a Pagar Mas Envio: <br> $0 </div>`;
+  } else {
+    totalResult.innerHTML =
+      `      <br>
+<div style="justify-content: center; align-items: center; font-size: 60px">Total a Pagar Mas Envio: <br> $` +
+      totalPagar +
+      `<br> El domicilio será enviado a la dirección: <br> </div>`;
+  }
+
+  let dir = document.getElementById("envio");
+
+  if (totalPagar > 1500) {
+    dir.innerHTML = direccion;
+  }
 }

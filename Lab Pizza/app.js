@@ -341,12 +341,8 @@ function total() {
       `      <br>
 <div style="justify-content: center; align-items: center; font-size: 60px">Total a Pagar Mas Envio: <br> $` +
       totalPagar +
-      `<br> El domicilio será enviado a la dirección: <br> </div>`;
-  }
-
-  let dir = document.getElementById("envio");
-
-  if (totalPagar > 1500) {
-    dir.innerHTML = direccion;
+      `<br> El domicilio será enviado a la dirección: <br> ` +
+      direccion +
+      `</div>`;
   }
 }
